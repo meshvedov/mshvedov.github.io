@@ -1,1 +1,208 @@
-Hello World
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Михаил Шведов</title>
+		<base href="https://uptowork.com" />
+		<meta charset="UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="View Михаил Шведов&#039;s professional online resume built with Uptowork." />
+		<meta name="robots" content="noindex" />
+
+										
+		<link rel="stylesheet" href="//cdn-assets.uptowork.net/css/creator/1518090149/normalize.css" />
+<link rel="stylesheet" href="//cdn-assets.uptowork.net/css/1518090149/creator.css" />
+<link rel="stylesheet" href="//cdn-assets.uptowork.net/css/1518090149/phantomjs.css" />
+<link rel="stylesheet" href="//cdn-assets.uptowork.net/css/creator/fonts/fonts.css" />
+<link rel="stylesheet" href="//cdn-assets.uptowork.net/css/1518090149/print.css" />
+
+	</head>
+
+	<body class="preload online">
+		<div id="printModeScreen" class="printmode-screen">
+	<div class="printmode-screen__text">
+		If you want to print the document,<br />
+		click the Download button.
+	</div>
+</div>
+
+		
+		<div id="creatorContent" class="online">
+										<div class="page fFamilyTxtArimo fStyleH1Bold fStyleH1LastBold fStyleH3Bold fStyleH5Bold fStyleH6Italic fStylePersonalTitleBold fStyleDateBold pagePaddingTop40 pagePaddingRight40 pagePaddingBottom40 pagePaddingLeft40 secSpace10 colSpace20" data-template="16" data-id="f2b97d77-96f5-46b1-bb5a-670c1ceba24a" data-user-id="1589961" data-colorset="416" data-language="ru_RU" data-type="cv" data-name="My resume" data-url="mshvedov" data-first-name="Михаил" data-last-name="Шведов"><div class="dRow firstRow"><div class="dCol dateLayoutLine dateSeparatorDash dateStickSeparatorFrom dateTextStyleBold colorTxtMediumBlack3 colorNameDarkSilver2 colorLastNameDarkSilver2 colorPositionDarkSilver2 colorImgBrdDarkSilver2 colorImgBgDarkSilver2 colorSecTitDarkSilver2 colorSecTitBgWhite3 colorSecTitBrdLightSilver3 colorSecLineLightSilver3 colorSecPointDarkSilver2 colorSecPointShadowDarkSilver1 colorEntTitMediumBlack3 colorEntSubMediumBlack3 colorEntBoldMediumBlack3 colorEntIcoWhite3 colorEntIcoBgDarkSilver3 colorIcoWhite3 colorIcoBgDarkSilver3 colorRatOnDarkSilver3 colorRatOffLightSilver3 colorRatAddDarkSilver3 colorBgWhite3 colorBgHfWhite3 colorDateMediumBlack3 colorDateBgDarkSilver2 firstCol" style="width: 76%; height: 268px;"><div class="section sectionType1 sectionBasic fStyleH1Bold fStyleH1LastBold">
+		<div class="entry">
+			<div class="secType1Acc">
+				<div class="secType1AccInitials">мш</div>
+			</div>
+			<div class="secType1Container">
+				<h1>
+					<span class="firstname">Михаил</span>
+					<span class="lastname">Шведов</span>
+				</h1>
+				<h2>Java Developer</h2>
+			</div>
+		</div>
+	</div><div class="section sectionType2 sectionPersonal secTitleOff secType2StyleCols secType2EntStyleLine">
+		<h3 class="title"><span class="ico"></span><span class="txt">Профиль</span></h3>
+		<div class="entryContainer content"><div class="entry personalAddress" data-order="1">
+	<div class="pointer"></div>
+	<div class="ico"></div>
+	<h4 class="personalTitle">Адрес</h4>
+	<div class="personalText"><p>Россия, Подольск</p></div>
+</div><div class="entry personalPhone" data-order="2">
+	<div class="pointer"></div>
+	<div class="ico"></div>
+	<h4 class="personalTitle">Телефон</h4>
+	<div class="personalText">+7(903)674-09-07</div>
+</div><div class="entry personalEmail entryExample" data-order="3">
+	<div class="pointer"></div>
+	<div class="ico"></div>
+	<h4 class="personalTitle">Электронная почта</h4>
+	<div class="personalText"><a href="mailto:micangel@mail.ru" rel="nofollow">micangel@mail.ru</a></div>
+</div><div class="entry personalCustom icoGithub" data-order="199">
+	<div class="pointer"></div>
+	<div class="ico"></div>
+	<h4 class="personalTitle">Github</h4>
+	<div class="personalText"><a href="https://github.com/meshvedov" target="_blank" rel="nofollow">https://github.com/meshvedov</a></div>
+</div></div>
+	<div class="entryContainer content"></div></div></div><div class="dCol dateLayoutLine dateSeparatorDash dateStickSeparatorFrom dateTextStyleBold colorTxtMediumBlack3 colorNameDarkSilver2 colorLastNameDarkSilver2 colorPositionDarkSilver2 colorImgBrdDarkSilver2 colorImgBgDarkSilver2 colorSecTitDarkSilver2 colorSecTitBgWhite3 colorSecTitBrdLightSilver3 colorSecLineLightSilver3 colorSecPointDarkSilver2 colorSecPointShadowDarkSilver1 colorEntTitMediumBlack3 colorEntSubMediumBlack3 colorEntBoldMediumBlack3 colorEntIcoWhite3 colorEntIcoBgDarkSilver3 colorIcoWhite3 colorIcoBgDarkSilver3 colorRatOnDarkSilver3 colorRatOffLightSilver3 colorRatAddDarkSilver3 colorBgWhite3 colorBgHfWhite3 colorDateMediumBlack3 colorDateBgDarkSilver2 lastCol" style="width: 24%; height: 268px;"></div></div><div class="dRow lastRow" style="height: 1132px;"><div class="dCol secTitMarginBottom10 secTitBorderBottomWidth1 secTitBorderBottomStyleSolid dateLayoutColAll dateSeparatorDash dateStickSeparatorFrom dateTextStyleBold colorTxtMediumBlack3 colorNameDarkSilver2 colorLastNameDarkSilver2 colorPositionDarkSilver2 colorImgBrdDarkSilver2 colorImgBgDarkSilver2 colorSecTitDarkSilver2 colorSecTitBgWhite3 colorSecTitBrdLightSilver3 colorSecLineLightSilver3 colorSecPointDarkSilver2 colorSecPointShadowDarkSilver1 colorEntTitMediumBlack3 colorEntSubMediumBlack3 colorEntBoldMediumBlack3 colorEntIcoWhite3 colorEntIcoBgDarkSilver3 colorIcoWhite3 colorIcoBgDarkSilver3 colorRatOnDarkSilver3 colorRatOffLightSilver3 colorRatAddDarkSilver3 colorBgWhite3 colorBgHfWhite3 colorDateMediumBlack3 colorDateBgDarkSilver2 firstCol lastCol" style="width: 100%; height: 1132px;"><div class="section sectionType4 sectionSummary secTitleOff">
+		<h3 class="title"><span class="ico"></span><span class="txt">Профессиональные цели</span></h3>
+		<div class="entryContainer content"><div class="entry">
+				<div class="pointer"></div>
+				<div class="text desc"><p>web application development, java programming, information technology, computer science</p></div>
+			</div></div>
+	</div><div class="section sectionType6 sectionExperience">
+		<h3 class="title"><span class="ico"></span><span class="txt">Профессиональный опыт</span></h3>
+		<div class="entryContainer"><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="">
+				<div class="pointer"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2017-11</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">До сегодня</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Онлайн стажировка по Java Enterprise</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>http://javaops.ru&nbsp;</p></h6>
+					<div class="text desc"><p><span>Участие в разработке Spring/JPA Enterprise приложения c авторизацией и правами доступа на основе</span><br></p>
+
+<p>ролей на стеке Maven/ Spring MVC/ Security/ REST(Jackson)/ Java 8 Stream API:</p>
+
+<p>- реализация сохранения в базы Postgres и HSQLDB на основе Spring JBDC, JPA(Hibernate) и Spring-Data-</p>
+
+<p>JPA;</p>
+
+<p>- реализация и тестирование REST и AJAX контроллеров;</p>
+
+<p>- реализация клиента на Bootstrap (css/js), datatables, jQuery + plugins.</p>
+
+<p></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="">
+				<div class="pointer"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2015-04</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">До сегодня</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Заместитель начальника отдела</p></h5>
+					<h6 class="subtitle"><p>АО "КБТочмаш им.А.Э.Нудельмана" г.Москва</p></h6>
+					<div class="text desc"><p></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="">
+				<div class="pointer"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2004-04</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">2015</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Инженер</p></h5>
+					<h6 class="subtitle"><p>АО "КБТочмаш им.А.Э.Нудельмана" г.Москва</p></h6>
+					<div class="text desc"><p>Ведение проектов: разработка конструкторской документации, разработка РЭА, разработка печатных плат, программирование микроконтроллеров, создание отладочных программ на С, Qt (Linux), Visual C (Windows), программирование последовательных интерфейсов (RS232, Manchester) Linux, Windows.</p>
+
+<p>Имеются благодарности.</p>
+
+<p></p></div>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="">
+				<div class="pointer"></div>
+				<div class="dates" style="margin-top: 2px;">					<span class="dateFrom">2003-03</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">2003-05</span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>инженер по технической информации</p>
+
+<p></p></h5>
+					<h6 class="subtitle"><p>филиал швейцарской компании d'Factory Sarl</p>
+
+<p></p></h6>
+					<div class="text desc"><p>Подробное техническое описание компьютерной техники hardware и software (на английском языке).</p>
+
+<p></p></div>
+				</div>
+			</div></div>
+	</div><div class="section sectionType5 sectionEducation">
+		<h3 class="title"><span class="ico"></span><span class="txt">Образование</span></h3>
+		<div class="entryContainer"><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="">
+				<div class="pointer"></div>
+				<div class="dates dateHideSeparator" style="margin-top: 2px;">					<span class="dateFrom">2004-03</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo"></span>
+				</div>
+				<div class="content">
+					<h5 class="title"><p>Московский Инженерно-Физический Институт (МИФИ)</p>
+
+<p></p></h5>
+					<div class="text desc"><p>Факультет "Автоматики и электроники", специальность: инженер-электронщик.</p>
+
+<p></p></div>
+				</div>
+			</div></div>
+	</div><div class="section sectionType7 sectionSkills ratingSquare">
+		<h3 class="title"><span class="ico"></span><span class="txt">Hавыки</span></h3>
+		<div class="entryContainer content"><div class="entry skillDescOnly">
+				<div class="pointer"></div>
+				<h4 class="descShort"><p>Java 8 core, Spring (core, Data JDBC, Data JPA, MVC, Security, Test), JSP/Servlets, JUnit, Hibernate, SQL,
+Maven, git, jQuery, Bootstrap, Ajax</p>
+
+<p></p></h4>
+				
+				
+			</div></div>
+	</div><div class="section sectionType9 sectionCourses">
+		<h3 class="title"><span class="ico"></span><span class="txt">Курсы</span></h3>
+		<div class="entryContainer"><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="">
+				<div class="pointer"></div>
+				<div class="dates" style="margin-top: -1px;">					<span class="dateSingle" style="display: none;"></span>
+					<span class="dateFrom">2017-11</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">2018-01</span>
+				</div>
+				<div class="content">
+					<h4 class="descShort"><span class="normalText"><p><b>&nbsp;</b><a href="http://javaops.ru/certificate?email=micangel%40mail.ru" rel="nofollow">Java Online Projects</a></p>
+
+<p></p></span></h4>
+				</div>
+			</div><div class="entry" data-date-from-year="" data-date-from-month="" data-date-to-year="" data-date-to-month="">
+				<div class="pointer"></div>
+				<div class="dates" style="margin-top: -1px;">					<span class="dateSingle" style="display: none;"></span>
+					<span class="dateFrom">2016-11</span>
+					<span class="dateSeparator"></span>
+					<span class="dateTo">2017-08</span>
+				</div>
+				<div class="content">
+					<h4 class="descShort"><p>&nbsp;<a href="https://javarush.ru/me" rel="nofollow">Онлайн-курсы JavaRush</a></p></h4>
+				</div>
+			</div></div>
+	</div></div></div></div>
+		
+					</div>
+
+		
+		
+					
+			
+		
+								<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e3b206154e","applicationID":"92799082,92343237,46924997","transactionName":"YgNUZ0sAWkNXBxBQX1tJdUZKFVtdGSUUSWx9EkJDZSJbXkIWC1VcUBRqfFcNXV5TIAtaRVgDWEdKIlteQhYLVVxQFHZcVw1dXlMnMg==","queueTime":0,"applicationTime":1492,"atts":"TkRDEQMaFnNZEQpNQkwvRVx4UxYKFDYxGxwXFFlGTQQaVF8ARgMSWBVeRVwFW0YUSEZaXFwDWEdwEXJfRBMFS1RQFHBcS0MOXkMICBUSVgpfVlcVfUAUXkYIBwNIAwoXVQQeBFVcGxwXE0VWSyhwEgxGVQwIDF8AAhtNFkVFARZ8XVQPWhEDQ1lZVQUKXlVZVXZaWg1bRVJKB1ZdF0oUQ0sOUEVVEEYDElsJG0NVAFoSGkYFWlNaE1hHG1sWXllJDV1VVEtBW1gVGURZSRRMRBgOU0FcQxgSQxcBSxIPRFtaWgBaV1MIV3lZVgpZRl1PV19bRhkVElREDEhEHA==","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
